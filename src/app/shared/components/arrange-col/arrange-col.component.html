@@ -1,0 +1,9 @@
+<span (click)="flipOrder()" style="cursor: pointer;display: block;">
+  <span><ng-content></ng-content></span>
+  <span class="cs-arrange-chevrons pull-right">
+    <i class="fa fa fa-long-arrow-up" [hidden]="nameAttr === data.pagination.sortKey && data.pagination.sortOrder === -1"
+       [ngClass]="{ active: nameAttr === data.pagination.sortKey && data.pagination.sortOrder === 1 }"></i>
+    <i class="fa fa-long-arrow-down" [hidden]="nameAttr === data.pagination.sortKey && data.pagination.sortOrder === 1"
+       [ngClass]="{ active: nameAttr === data.pagination.sortKey && data.pagination.sortOrder === -1 }"></i>
+  </span>
+</span>

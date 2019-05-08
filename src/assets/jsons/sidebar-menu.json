@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Dashboard",
+    "path": "/home",
+    "icon": "fa fa-th-large",
+    "power": null
+  },
+  {
+    "text": "Organisations",
+    "path": "/organisations",
+    "icon": "fa fa-university",
+    "power": null
+  },
+  {
+    "text": "Institute Faculty",
+    "path": "/institute-faculties",
+    "icon": "fa fa-users",
+    "power": null
+  },
+  {
+    "text": "Internal Users",
+    "path": "/internal-users",
+    "icon": "fa fa-user",
+    "power": null
+  },
+  {
+    "text": "Students",
+    "path": "/students",
+    "icon": "fa fa-graduation-cap",
+    "power": null
+  }
+]

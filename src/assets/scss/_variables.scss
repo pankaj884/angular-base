@@ -1,0 +1,64 @@
+$gray-base: #000;
+$gray-darker: #484848;
+$gray-dark: #76787A;
+$gray: #B1B3B5;
+$gray-light: #D5D6D8;
+$gray-lighter: #f4f4f4;
+
+$secondary-color-dark: #1e4375;
+$theme-color: #1a5099;
+$secondary-color: #1a5099;
+$border-color: #D5D6D8;
+
+$text-danger: #ED1C24;
+$text-success: #6BC04B;
+$text-info: #008CFF;
+$text-secondary: #1a5099;
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transform($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin transform-scale($scale) {
+  -webkit-transform: $scale;
+  -moz-transform: $scale;
+  -ms-transform: $scale;
+  -o-transform: $scale;
+  transform: $scale;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin box-shadow($box-shadow1, $box-shadow2:false) {
+  $params: $box-shadow1;
+  @if $box-shadow2 {
+    $params: $box-shadow1, $box-shadow2;
+  }
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  -o-box-shadow: $params;
+  box-shadow: $params;
+}

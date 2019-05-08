@@ -1,0 +1,7 @@
+<section [ngClass]="{'show-sidebar': dataProvider.data.state}">
+  <app-main-sidebar *ngIf="isLoggedIn"></app-main-sidebar>
+  <div [ngClass]="{'main-content': isLoggedIn}">
+    <app-header *ngIf="isLoggedIn"></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</section>

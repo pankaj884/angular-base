@@ -1,0 +1,88 @@
+<div class="card account-card">
+  <div class="container">
+    <div class="header text-center">
+      <img src="../assets/images/logo.png" alt="logo"/>
+      <hr>
+    </div>
+
+    <div class="body">
+      <h5 class="mb-4 text-center mt-5">Create Your Account</h5>
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" ngNativeValidate>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="organisationName">Organisation name</label>
+              <input type="text" class="form-control" id="organisationName" aria-describedby="organisationName"
+                     placeholder="org. name" [(ngModel)]="user.organisationName" name="organisationName" required>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="organisationPhone">Organisation phone</label>
+              <input type="number" class="form-control" id="organisationPhone" [(ngModel)]="user.organisationPhone" name="organisationPhone"
+                     placeholder="org. phone" required minlength="10" maxlength="10">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="city">Organisation City</label>
+              <input type="text" class="form-control" id="city" aria-describedby="city"
+                     placeholder="org. city" [(ngModel)]="user.city" name="city" required>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="state">Organisation State</label>
+              <input type="text" class="form-control" id="state" [(ngModel)]="user.state" name="state"
+                     placeholder="org. state" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name"
+                     placeholder="your name" [(ngModel)]="user.name" name="name" required>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="phone">Your phone</label>
+              <input type="number" class="form-control" id="phone" [(ngModel)]="user.phone" name="phone"
+                     placeholder="your phone" required minlength="10" maxlength="10">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                     placeholder="you@domain.com" [(ngModel)]="user.email" name="email" required>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password"
+                     placeholder="password" required>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="busy"><span *ngIf="!busy">Sign up</span> <span
+          *ngIf="busy" class="fa fa-spinner fa-spin"></span></button>
+      </form>
+
+      <p class="mt-4 mb-5 text-center">Already have account?<a style="text-decoration: underline;" [routerLink]="['/login']">Login here</a></p>
+    </div>
+  </div>
+</div>
+
+

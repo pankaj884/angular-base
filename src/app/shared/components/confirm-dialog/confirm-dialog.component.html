@@ -1,0 +1,7 @@
+<div class="modal-body" [ngBusy]="busy">
+  <h6 class="modal-title">Are you sure want to <strong>{{data.actionLabel || data.operation}}</strong>?</h6>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-sm btn-warning" (click)="confirmFn()">{{data.actionLabel || data.operation}}</button>
+  <button type="button" class="btn btn-sm btn-success" (click)="activeModal.close()">Cancel</button>
+</div>

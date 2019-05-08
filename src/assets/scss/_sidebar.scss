@@ -1,0 +1,93 @@
+.sidebar {
+  position: fixed;
+  width: 200px;
+  top: 0;
+  left: -200px;
+  z-index: 100;
+  transition: 100ms left;
+  background-color: #fff;
+  min-height: 100%;
+  box-shadow: 1px 1px 6px rgba(34,48,62,.26);
+  font-family: LatoMedium, sans-serif;
+
+  #navigation-toggle {
+    position: absolute;
+    left: 200px;
+    top: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 3px 7px;
+  }
+
+  .logo {
+    width: 120px;
+    margin-top: 15px;
+  }
+
+  .nav {
+    &-link {
+      padding: 0.75rem 1rem;
+      border-radius: 0;
+    }
+    li {
+      border-left: 3px solid transparent;
+      @include transition(border-left-color 0.4s ease);
+
+      a {
+        color: $gray-dark;
+        letter-spacing: .025em;
+
+        .fa {
+          padding-right: 10px;
+          width: 24px;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: $text-secondary;
+        }
+      }
+      .sub-menu {
+        li {
+          border-left: 0;
+        }
+        a {
+          padding-left: 44px;
+        }
+        li.active {
+          a {
+            color: $text-secondary;
+            border-right: 3px solid $text-secondary;
+          }
+        }
+      }
+      &.active {
+        border-color: $secondary-color;
+        > a {
+          color: $text-secondary;
+        }
+        a {
+          background-color: $gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  transition: 100ms left;
+}
+
+.show-sidebar {
+  .sidebar {
+    left: 0;
+  }
+  .main-content {
+    left: 200px;
+  }
+}
+

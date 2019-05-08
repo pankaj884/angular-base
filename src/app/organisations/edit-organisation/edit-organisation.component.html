@@ -1,0 +1,46 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" ngNativeValidate [ngBusy]="busy">
+  <div class="modal-header">
+    <h5 class="modal-title">Edit Organisation</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="organisationName">Organisation name</label>
+          <input type="text" class="form-control" id="organisationName" aria-describedby="organisationName"
+                 placeholder="org. name" [(ngModel)]="body.organisationName" name="organisationName" required disabled>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="organisationPhone">Organisation phone</label>
+          <input type="number" class="form-control" id="organisationPhone" [(ngModel)]="body.organisationPhone" name="organisationPhone"
+                 placeholder="org. phone" required minlength="10" maxlength="10">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="city">Organisation City</label>
+          <input type="text" class="form-control" id="city" aria-describedby="city"
+                 placeholder="org. city" [(ngModel)]="body.address.city" name="city" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="state">Organisation State</label>
+          <input type="text" class="form-control" id="state" [(ngModel)]="body.address.state" name="state"
+                 placeholder="org. state" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" style="width: 75px;" class="btn btn-primary">Save</button>
+  </div>
+</form>

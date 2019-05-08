@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Caabil Organisation</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css">
+    .pre-bootstrap {
+      opacity: 0;
+      transition: opacity .8s ease-in-out;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff ;
+      z-index: -1;
+    }
+    .pre-bootstrap .messaging {
+      color: #3F51B5 ;
+      font-family: monospace ;
+      left: 0 ;
+      margin-top: -37px ;
+      position: absolute ;
+      right: 0 ;
+      text-align: center ;
+      top: 50% ;
+    }
+
+    .pre-bootstrap h1 {
+      font-size: 26px ;
+      line-height: 35px ;
+      margin: 0 0 20px 0;
+    }
+    .pre-bootstrap img {
+      margin: 0 0 20px 0;
+      width:200px;
+    }
+
+    .pre-bootstrap p {
+      font-size: 18px ;
+      line-height: 14px ;
+      margin: 0;
+    }
+    app-root:empty + .pre-bootstrap {
+      opacity: 1;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+  <div class="pre-bootstrap">
+    <div class="messaging">
+
+      <img src="../assets/images/logo.png" alt="logo"/>
+
+      <p>
+        Please stand for your ticket while app is loading!
+      </p>
+
+    </div>
+  </div>
+</body>
+</html>

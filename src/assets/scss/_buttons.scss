@@ -1,0 +1,43 @@
+.btn {
+    outline: none !important;
+    font-family: Lato, sans-serif;
+    @include border-radius(2px);
+    img {
+        width: 32px;
+    }
+  &.btn-xs {
+    padding: 0.15rem 0.35rem;
+    font-size: 0.675rem;
+  }
+
+  &.btn-default {
+    background-color: #FFF;
+    color: #8c8c8c;
+    border-color: #cbcbcb;
+    border-radius: 4px;
+    &:hover {
+      background-color: #F4F4F4;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $theme-color;
+    color: white;
+    border-color: $theme-color;
+    border-radius: 4px;
+    &:hover {
+      background-color: $theme-color;
+      box-shadow: none;
+    }
+  }
+
+}
+
+.add-btn {
+  font-size: 20px;
+  color: $theme-color;
+  &:hover {
+    text-decoration: none;
+  }
+}

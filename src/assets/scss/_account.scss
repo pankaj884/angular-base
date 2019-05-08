@@ -1,0 +1,40 @@
+.account-card {
+  height: 100vh;
+  justify-content: space-around;
+  border-radius: 0;
+  border: none;
+
+  .container {
+    width: 34rem;
+    max-width: 100vw;
+    background-color: white;
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+
+    hr {
+      border-color: $gray-lighter;
+    }
+
+    img {
+      max-width: 200px;
+    }
+
+    .body {
+      width: 20rem;
+      margin: 0 auto;
+    }
+  }
+
+  .form-control {
+    background-color: $gray-lighter;
+    border-color: $gray-lighter;
+    height: 38px;
+  }
+  .btn {
+    height: 38px;
+  }
+
+  a, a:hover {
+    color: inherit;
+  }
+}

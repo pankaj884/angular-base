@@ -1,0 +1,25 @@
+<nav class="sidebar">
+  <a href="javascript:void(0)" id="navigation-toggle" (click)="toggleState()"><span class="fa fa-bars"></span></a>
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+      <div class="img-wrapper text-center">
+        <img src="../assets/images/logo.png" class="logo" alt="logo"/>
+      </div>
+    </li>
+  </ul>
+  <br>
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item" *ngFor="let item of menuItems" [ngClass]="getMenuItemPropClasses(item)">
+      <a class="nav-link" href="javascript:void(0)" (click)="clickFn(item)"><span class="{{item.icon}}"></span>{{item.text}}
+        <i *ngIf="item.submenu" [ngClass]="item.isMenuExpanded ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa pull-right"></i>
+      </a>
+      <div *ngIf="item.submenu" class="sub-menu collapse" [ngbCollapse]="!item.isMenuExpanded">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item" *ngFor="let subItem of item.submenu" [ngClass]="getMenuItemPropClasses(subItem)">
+            <a class="nav-link" [routerLink]="[subItem.path]"><span class="{{subItem.icon}}"></span>{{subItem.text}}</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

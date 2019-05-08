@@ -1,0 +1,31 @@
+@import "~assets/scss/variables";
+.navbar {
+  background-color: $secondary-color-dark;
+  padding: 0.25rem;
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .navbar-brand {
+    img {
+      width: 120px;
+    }
+  }
+  .dropdown-item:active {
+    background-color: transparent;
+  }
+  .dropdown {
+    a {
+      text-decoration: none;
+      &.logout-btn {
+        color: $gray-dark;
+      }
+    }
+  }
+  &.navbar-light .navbar-toggler{
+    color: white;
+    border: 2px solid white;
+  }
+}
+

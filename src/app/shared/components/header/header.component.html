@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-xl fixed-top navbar-light w-100 justify-content-between">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-md-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link d-flex text-white align-items-center dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            <figure class="mb-0 d-flex">
+              <ngx-avatar name="{{user.name}}" src="{{user.profilePicURL?.thumbnail}}" size="38"></ngx-avatar> &nbsp;
+              <span class="text-capitalize mt-2" *ngIf="user.name">{{user.name.slice(0,10)}}</span>
+            </figure>
+          </a>
+          <ul class="dropdown-menu border-0 box-shadow pb-0" aria-labelledby="navbarDropdownMenuLink">
+            <li class="dropdown-item">
+              <div class="media">
+                <div class="media-left mr-2">
+                  <ngx-avatar name="{{user.name}}" src="{{user.profilePicURL?.thumbnail}}"></ngx-avatar>
+                </div>
+                <div class="media-body align-self-center">
+                  <span class="text-capitalize" *ngIf="user.name">{{user.name.slice(0,10)}}</span> <br>
+                  <a [routerLink]="['/profile']" class="">View Profile</a>
+                </div>
+              </div>
+            </li>
+            <hr class="m-0">
+            <li class="dropdown-item p-0">
+              <a class="d-flex align-items-center p-2 pl-4 logout-btn" (click)="logout()" href="javascript:void(0)"><span class="fa fa-sign-out"></span>&nbsp;Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+.avatar {
+  &.thumbnail {
+    padding: 0;
+  }
+  &-small {
+    width: 18px;
+    height: 18px;
+  }
+  &-med {
+    width: 34px;
+    height: 34px;
+  }
+  &-lg {
+    width: 60px;
+    max-width: 60px;
+    height: 60px;
+  }
+  &-xl {
+    width: 90px;
+    height:90px;
+    object-fit: contain;
+  }
+}

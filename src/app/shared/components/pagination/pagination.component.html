@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-2">
+    <select [(ngModel)]="data.pagination.pageSize" (change)="changePageSize()" class="form-control" style="max-width: 60px;">
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+  </div>
+  <div class="col-10">
+    <ngb-pagination class="d-flex justify-content-end" (pageChange)="pageChange($event)" [(collectionSize)]="data.pagination.total" [(pageSize)]="data.pagination.pageSize"  [(page)]="data.pagination.page" [(maxSize)]="maxSize" aria-label="Default pagination"></ngb-pagination>
+  </div>
+</div>
+
+<div>
+  Showing {{(data.pagination.page -1) * data.pagination.pageSize + 1}} to
+  <span *ngIf="data.pagination.page * data.pagination.pageSize < data.pagination.total">{{ data.pagination.page * data.pagination.pageSize}}</span>
+  <span *ngIf="!(data.pagination.page * data.pagination.pageSize < data.pagination.total)">{{data.pagination.total}}</span> of {{data.pagination.total}} entries
+</div>
+

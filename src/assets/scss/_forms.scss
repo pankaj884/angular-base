@@ -1,0 +1,27 @@
+form:not[ngNativeValidate] {
+  .form-control {
+    &.ng-dirty {
+      &.ng-valid[required], &.ng-valid.required {
+        border-left: 5px solid #42A948; /* green */
+      }
+      &.ng-invalid:not(form) {
+        border-left: 5px solid #a94442; /* red */
+      }
+    }
+  }
+}
+.form-control, .btn {
+  box-shadow: none !important;
+  border-radius: 2px;
+
+  &.search {
+    max-width: 200px;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
